@@ -51,6 +51,15 @@ $('#verborgen_file').change(function () {
     }
 });
 
+$('#range').change(function(){
+    var myVar = $(this).val();
+    if(myVar == 100){
+        $('.product-tumb').css('background-size', "cover");
+    }else{
+        $('.product-tumb').css('background-size', myVar +"%");
+    }
+});
+
 
 
 $('#ag').on("click", function(){

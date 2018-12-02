@@ -6,7 +6,7 @@
 	<!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<meta charset="utf-8">
-	<title>Your page title here :)</title>
+	<title>Post maker for AG</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -28,6 +28,7 @@
 ---------------------------------------------------- -->
 	<script src="js/html2canvas.min.js"></script>
 
+
 	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
@@ -48,6 +49,7 @@
 						<div class="row">
 							<input type='file' id='verborgen_file' />
 							<input type="button" class="u-full-width" value="Upload" id="uploadButton" />
+
 							<!-- Description -->
 							<div class="twelve columns">
 								<label ng-init="description='A Simple Description Goes Here'" for="description">Description :</label>
@@ -55,18 +57,26 @@
 							</div>
 							<!-- Price -->
 							<div class="twelve columns">
-								<label  for="big_price">Price :</label>
+								<label for="big_price">Price :</label>
 								<div class="row">
-									<input type="text" class="six columns" id="big_price" ng-init="big_price='249'" ng-model="big_price" placeholder="249">
+									<input type="text" class="six columns" id="big_price" ng-init="big_price='249'" ng-model="big_price"
+									 placeholder="249">
 									<input type="text" class="six columns" ng-init="small_price='75'" ng-model="small_price" placeholder="75 QR">
 								</div>
 							</div>
-							<label>Theme :</label>
-							<div class="themes">
-									<div id="pink"></div>
-									<div id="yellow"></div>
-									<div id="green"></div>
-									<div id="blue"></div>
+							<label>Theme & image adjust :</label>
+							<div class="row">
+								<div class="six columns">
+									<div class="themes">
+										<div id="pink"></div>
+										<div id="yellow"></div>
+										<div id="green"></div>
+										<div id="blue"></div>
+									</div>
+								</div>
+								<div class="six columns"><input id="range" type="range"  class="u-full-width"  />
+								</div>
+
 							</div>
 							<!-- Branche -->
 							<div class="twelve columns">

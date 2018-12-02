@@ -43,12 +43,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #c0c0c0;
+    background: white;
     height: 350px;
     width: 500px;
     background-image: url('../images/placeholder.jpeg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
