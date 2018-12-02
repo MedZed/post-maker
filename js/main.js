@@ -1,10 +1,13 @@
 var shotit = function() {
 
-    html2canvas(document.getElementsByTagName("section")[0],{
-        onrendered: function(canvas) {
-            console.log('Report Image URL:');
-        },
-        scale: 2,
+  
+    var div = document.getElementsByTagName("section")[0];
+    var canvas = document.createElement('canvas');
+ 
+
+    html2canvas(div,{
+        canvas:canvas,
+        scale:2,
       }).then(function(canvas) {
         // document.body.appendChild(canvas);
         var url = canvas.toDataURL();
@@ -13,26 +16,7 @@ var shotit = function() {
         triggerDownload.remove();
       });
   }
-
-//   function saveAs(uri, filename) {
-//     var link = document.createElement('a');
-//     if (typeof link.download === 'string') {
-//       link.href = uri;
-//       link.download = filename;
-
-//       //Firefox requires the link to be in the body
-//       document.body.appendChild(link);
-
-//       //simulate click
-//       link.click();
-
-//       //remove the link when done
-//       document.body.removeChild(link);
-//     } else {
-//       window.open(uri);
-//     }
-//   }
-
+ 
 
 $('#verborgen_file').hide();
 $('#uploadButton').on('click', function () {
@@ -57,6 +41,22 @@ $('#range').change(function(){
         $('.product-tumb').css('background-size', "cover");
     }else{
         $('.product-tumb').css('background-size', myVar +"%");
+    }
+});
+$('#range-position-x').change(function(){
+    var myVar = $(this).val();
+    if(myVar == 0){
+        $('.product-tumb').css('background-position-x', "center");
+    }else{
+        $('.product-tumb').css('background-position-x', myVar +"%");
+    }
+});
+$('#range-position-y').change(function(){
+    var myVar = $(this).val();
+    if(myVar == 0){
+        $('.product-tumb').css('background-position-y', "center");
+    }else{
+        $('.product-tumb').css('background-position-y', myVar +"%");
     }
 });
 

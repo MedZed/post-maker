@@ -18,7 +18,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="./lib/Skeleton-2.0.4/css/normalize.css">
 	<link rel="stylesheet" href="./lib/Skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" href="css/range.css">
 	<link rel="stylesheet" href="css/style.css">
+
 
 
 	<!-- Favicon
@@ -39,7 +41,7 @@
 	<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container" ng-app="" style="margin-top:25px;">
-
+ 
 		<div class="row">
 			<div class="one-half column">
 				<h4>Input</h4>
@@ -66,7 +68,7 @@
 							</div>
 							<label>Theme & image adjust :</label>
 							<div class="row">
-								<div class="six columns">
+								<div class="three columns">
 									<div class="themes">
 										<div id="pink"></div>
 										<div id="yellow"></div>
@@ -74,8 +76,9 @@
 										<div id="blue"></div>
 									</div>
 								</div>
-								<div class="six columns"><input id="range" type="range"  class="u-full-width"  />
-								</div>
+								<div class="three columns"><input id="range" type="range"  value="100" class="u-full-width" /> </div>
+								<div class="three columns"><input id="range-position-y" value="0" type="range" min="-100" max="100" class="u-full-width" /></div>
+								<div class="three columns"><input id="range-position-x"  value="0" type="range" min="-100" max="100" class="u-full-width" /></div>
 
 							</div>
 							<!-- Branche -->
