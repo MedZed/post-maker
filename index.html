@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Your page title here :)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="./lib/Skeleton-2.0.4/css/normalize.css">
+	<link rel="stylesheet" href="./lib/Skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="lib/Skeleton-2.0.4/images/favicon.png">
+	<!-- HTML TO CANVAS
+---------------------------------------------------- -->
+	<script src="js/html2canvas.min.js"></script>
+
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container" ng-app="" style="margin-top:25px;">
+
+		<div class="row">
+			<div class="one-half column">
+				<h4>Input</h4>
+				<p>Fill this form to generate image</p>
+				<div class="inputs">
+					<form>
+						<div class="row">
+							<input type='file' id='verborgen_file' />
+							<input type="button" class="u-full-width" value="Upload" id="uploadButton" />
+							<!-- Description -->
+							<div class="twelve columns">
+								<label ng-init="description='A Simple Description Goes Here'" for="description">Description :</label>
+								<input type="text" class="u-full-width" id="description" ng-model="description" placeholder="Enter description here">
+							</div>
+							<!-- Price -->
+							<div class="twelve columns">
+								<label  for="big_price">Price :</label>
+								<div class="row">
+									<input type="text" class="six columns" id="big_price" ng-init="big_price='249'" ng-model="big_price" placeholder="249">
+									<input type="text" class="six columns" ng-init="small_price='75'" ng-model="small_price" placeholder="75 QR">
+								</div>
+							</div>
+							<label>Theme :</label>
+							<div class="themes">
+									<div id="pink"></div>
+									<div id="yellow"></div>
+									<div id="green"></div>
+									<div id="blue"></div>
+							</div>
+							<!-- Branche -->
+							<div class="twelve columns">
+								<label>Branches & Status:</label>
+								<div class="row ">
+									<div class="six columns check">
+										<input type="checkbox" id="ag"><label class="lb lb-ag" for="ag"></label>
+										<input type="checkbox" id="ac"><label class="lb lb-ac" for="ac"></label>
+										<input type="checkbox" id="nw"><label class="lb lb-nw" for="nw"></label>
+										<input type="checkbox" id="dc"><label class="lb lb-dc" for="dc"></label>
+									</div>
+
+									<div class="six columns">
+										<select ng-model="yourSelect" style="width: 100%" ng-options="option as option for option in ['New Arrival وصل حديثا', 'Coming soon قادم قريبا ']"
+										 ng-init="yourSelect='New Arrival وصل حديثا'">
+										</select>
+									</div>
+
+								</div>
+							</div>
+
+
+						</div>
+					</form>
+
+					<a class="button button-primary u-full-width" href="#" onClick="shotit()">shoot it</a>
+				</div>
+
+
+				<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+
+				<!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+			</div>
+			<div class="one-half column">
+				<h4>Output</h4>
+				<p>This is the preview</p>
+
+				<section class="product-card" id="widget">
+					<div class="badge">{{yourSelect}}</div>
+					<div class="product-tumb">
+						<!-- <img src="1.jpg" alt=""> -->
+					</div>
+					<div class="product-details">
+						<div class="title">{{description}}</div>
+						<div class="product-bottom-details">
+							<div class="price product-price-color product-price"> {{big_price}}<small>.{{small_price}} QR</small></div>
+							<div class="product-links">
+								<img class="logos ag" src="images/AG.jpg" width="75px" height="75px" alt="" style="display: none">
+								<img class="logos dc" src="images/DC.jpg" width="75px" height="75px" alt="" style="display: none">
+								<img class="logos ac" src="images/AC.jpg" width="75px" height="75px" alt="" style="display: none">
+								<img class="logos nw" src="images/NW.jpg" width="75px" height="75px" alt="" style="display: none">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	 crossorigin="anonymous"></script>
+	<script src='js/main.js'></script>
+
+	<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
