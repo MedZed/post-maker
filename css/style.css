@@ -151,6 +151,9 @@ cursor: pointer;
 .lb-ag{
     background: url(../images/AG.jpg) no-repeat center/cover ; 
 }
+.lb-agb{
+    background: url(../images/AGB.jpg) no-repeat center/cover ; 
+}
 .lb-nw{
     background: url(../images/NW.jpg) no-repeat center/cover ; 
 }

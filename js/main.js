@@ -70,6 +70,14 @@ $('#ag').on("click", function(){
     }
 });
 
+$('#agb').on("click", function(){
+    if( $('.agb').is(':hidden')) {
+    $('.agb').show();
+    }else{
+    $('.agb').hide();
+    }
+});
+
 
 $('#dc').on("click", function(){
     if( $('.dc').is(':hidden')) {
