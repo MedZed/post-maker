@@ -1,9 +1,12 @@
 var shotit = function() {
 
-  
+ 
+
     var div = document.getElementsByTagName("section")[0];
     var canvas = document.createElement('canvas');
  
+ 
+
 
     html2canvas(div,{
         canvas:canvas,
@@ -14,8 +17,27 @@ var shotit = function() {
         var triggerDownload = $("<a>").attr("href", url).attr("download",name+".png").appendTo("body");
         triggerDownload[0].click();
         triggerDownload.remove();
-      });
+      });  
+ 
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 $('#verborgen_file').hide();

@@ -25,7 +25,7 @@
 
 	<!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="lib/Skeleton-2.0.4/images/favicon.png">
+	<link rel="icon" type="image/png" href="./images/favicon.png">
 	<!-- HTML TO CANVAS
 ---------------------------------------------------- -->
 	<script src="js/html2canvas.min.js"></script>
@@ -40,12 +40,12 @@
 
 	<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container" ng-app="" style="margin-top:25px;">
+	<div class="container" ng-app="" style="margin-top:15px;">
  
 		<div class="row">
-			<div class="one-half column">
-				<h4>Input</h4>
-				<p>Fill this form to generate image</p>
+			<div class="four columns">
+				<!-- <h6 class="text-center"> <b>Input :</b> Configurations</h6>  -->
+
 				<div class="inputs">
 					<form>
 						<div class="row">
@@ -61,8 +61,8 @@
 							<div class="twelve columns">
 								<label for="big_price">Price :</label>
 								<div class="row">
-									<input type="text" class="six columns" id="big_price" ng-init="big_price='249'" ng-model="big_price"
-									 placeholder="249">
+									<input type="text" class="six columns" id="big_price" ng-init="big_price='49'" ng-model="big_price"
+									 placeholder="49">
 									<input type="text" class="six columns" ng-init="small_price='75'" ng-model="small_price" placeholder="75 QR">
 								</div>
 							</div>
@@ -115,9 +115,9 @@
 				<!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
 
 			</div>
-			<div class="one-half column">
-				<h4>Output</h4>
-				<p>This is the preview</p>
+			<div class="eight columns">
+				<!-- <h6 class="text-center"> <b>Output :</b> Generated Image</h6>  -->
+				
 
 				<section class="product-card" id="widget">
 					<div class="badge">{{yourSelect}}</div>

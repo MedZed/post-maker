@@ -24,29 +24,32 @@ a {
 
 .inputs{
     background-color: #f6f6f6;
-    height: 467px;
+    height: 617px;
+    min-width:400px;
     padding: 30px 20px;
-    /* box-shadow: 0 2px 7px #dfdfdf; */
+    box-shadow: 0 2px 7px #d2d2d1;
 
 }
 .product-card {
-    width: 500px;
+    width: 630px;
     position: relative;
-    /* box-shadow: 0 2px 7px #dfdfdf; */
+    box-shadow: 0 2px 7px #d2d2d1;
     margin: 0 auto;
     background-color: #1a1a1a;
 }
 
-
+.text-center{
+    text-align: center !important;
+}
 
 .product-tumb {
     display: flex;
     align-items: center;
     justify-content: center;
     background: white;
-    height: 350px;
-    width: 500px;
-    background-image: url('../images/placeholder.jpeg');
+    height: 500px;
+    width: 630px;
+    background-image: url('../images/placeholder.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,32 +139,35 @@ cursor: pointer;
     display:inline-block;
     padding: 0 0 0 0px;
     background-color: red;
-    opacity: 0.5;
-    height:37px;
-    width:37px;
-    border-radius: 0.25rem;
-    background-size: 50%;
+    opacity: 0.6;
+    height:30px;
+    width:30px;
+    margin-top: 5px;
+    border-radius: 50%;
+  
 }
  
 .check input[type=checkbox]:checked + .lb {
     opacity: 1;
+    border: 1px solid #3f3f3f;
+    background-size: 70%;
 
   }
 
 .lb-ag{
-    background: url(../images/AG.jpg) no-repeat center/cover ; 
+    background: url(../images/AG.jpg) no-repeat center/60% white;
 }
 .lb-agb{
-    background: url(../images/AGB.jpg) no-repeat center/cover ; 
+    background: url(../images/AGB.jpg) no-repeat center/60% white;
 }
 .lb-nw{
-    background: url(../images/NW.jpg) no-repeat center/cover ; 
+    background: url(../images/NW.jpg) no-repeat center/60% white;
 }
 .lb-dc{
-    background: url(../images/DC.jpg) no-repeat center/cover ; 
+    background: url(../images/DC.jpg) no-repeat center/60% white;
 }
 .lb-ac{
-    background: url(../images/AC.jpg) no-repeat center/cover ; 
+    background: url(../images/AC.jpg) no-repeat center/60% white;
 }
 
 .product-price small {
