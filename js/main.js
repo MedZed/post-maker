@@ -10,13 +10,14 @@ var shotit = function() {
 
     html2canvas(div,{
         canvas:canvas,
-        scale:2,
+        scale:1.5,
       }).then(function(canvas) {
         // document.body.appendChild(canvas);
         var url = canvas.toDataURL();
-        var triggerDownload = $("<a>").attr("href", url).attr("download",name+".png").appendTo("body");
-        triggerDownload[0].click();
-        triggerDownload.remove();
+        var triggerDownload = $("#download").attr("href", url).attr("download",name+".png").addClass("ready");
+
+        // triggerDownload[0].click();
+        // triggerDownload.remove();
       });  
  
 
