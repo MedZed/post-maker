@@ -1,12 +1,7 @@
 var shotit = function() {
-
- 
-
+    $("#download").text("loading...");
     var div = document.getElementsByTagName("section")[0];
     var canvas = document.createElement('canvas');
- 
- 
-
 
     html2canvas(div,{
         canvas:canvas,
@@ -14,7 +9,7 @@ var shotit = function() {
       }).then(function(canvas) {
         // document.body.appendChild(canvas);
         var url = canvas.toDataURL();
-        var triggerDownload = $("#download").attr("href", url).attr("download",name+".png").addClass("ready");
+        var triggerDownload = $("#download").attr("href", url).attr("download",name+".png").css('background', 'url("' + url + '") center/cover no-repeat').text("download it");
 
         // triggerDownload[0].click();
         // triggerDownload.remove();
@@ -23,23 +18,6 @@ var shotit = function() {
 
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 $('#verborgen_file').hide();
 $('#uploadButton').on('click', function () {
