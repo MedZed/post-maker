@@ -140,9 +140,9 @@ cursor: pointer;
     padding: 0 0 0 0px;
     background-color: red;
     opacity: 0.6;
-    height:30px;
-    width:30px;
-    margin-top: 5px;
+    height:25px;
+    width:25px;
+    margin-top: 8px;
     border-radius: 50%;
   
 }
@@ -159,6 +159,9 @@ cursor: pointer;
 }
 .lb-agb{
     background: url(../images/AGB.jpg) no-repeat center/60% white;
+}
+.lb-agbk{
+    background: url(../images/AGBK.jpg) no-repeat center/60% white;
 }
 .lb-nw{
     background: url(../images/NW.jpg) no-repeat center/60% white;

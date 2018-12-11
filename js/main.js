@@ -10,7 +10,6 @@ var shotit = function() {
         // document.body.appendChild(canvas);
         var url = canvas.toDataURL();
         var triggerDownload = $("#download").attr("href", url).attr("download",name+".png").css('background', 'url("' + url + '") center/cover no-repeat').text("download it");
-
         // triggerDownload[0].click();
         // triggerDownload.remove();
       });  
@@ -76,6 +75,14 @@ $('#agb').on("click", function(){
     $('.agb').show();
     }else{
     $('.agb').hide();
+    }
+});
+
+$('#agbk').on("click", function(){
+    if( $('.agbk').is(':hidden')) {
+    $('.agbk').show();
+    }else{
+    $('.agbk').hide();
     }
 });
 
