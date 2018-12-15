@@ -113,12 +113,37 @@
 							</div>
 
 
+							<!-- More -->
+							<div class="twelve columns">
+									<label>Background:</label>
+									<div class="row ">
+										<div class="six columns">
+												<label  class="button checkbox_bg_for_img" for="multiple">  IMG
+														<input type="checkbox" style="display: none" name="" id="multiple">
+		
+													</label>
+									
+														<label  class="button checkbox_bg_for_img checkbox_clr" for="color"> CLR
+															<input type="color" style="display: none" name="" id="color">
+			
+														</label>
+										</div>
+
+									</div>
+								</div>
+
+
 						</div>
 					</form>
 
 					<div class="row">
 						<a class="button button-primary six columns" href="#" onClick="shotit()">shoot it</a>
 						<a class="button button-primary six columns" href="#" id="download" style=" background-color: #FFC107; text-shadow:1px 1px 1px rgba(0, 0, 0, 0.6)">No image yet</a>
+					</div>
+					<div class="row ">
+						<div class="twelve columns psd">
+							For posts with multiple products please download the <a download  href="./Template/psd.zip"> photoshop template </a>
+						</div>
 					</div>
 
 				</div>
@@ -135,7 +160,7 @@
 
 				<section class="product-card" id="widget">
 					<div class="badge">{{yourSelect}}</div>
-					<div class="product-tumb">
+					<div class="product-tumb"  data-adaptive-background data-ab-css-background>
 						<!-- <img src="1.jpg" alt=""> -->
 					</div>
 					<div class="product-details">
@@ -158,8 +183,9 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	 crossorigin="anonymous"></script>
+ 
 	<script src='js/main.js'></script>
-
+ 
 	<!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

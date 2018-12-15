@@ -46,13 +46,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    /* background: white; */
     height: 500px;
     width: 630px;
     background-image: url('../images/placeholder.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 
 
@@ -64,10 +65,22 @@ a {
  color: white;
  text-transform: capitalize;
  font-size: 20px;
- margin: 5px;
+ padding: 5px;
+ background-color: #1a1a1a;
 }
 
+.checkbox_bg_for_img{
+    width: 38px;
+    padding: 0px;
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(182, 182, 182, 0.2);
+}
 
+.multiple_checked{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.71);
+}
 
 
 .product-bottom-details {
@@ -192,4 +205,12 @@ cursor: pointer;
 
 .product-links a:hover {
     color: #fbb72c;
+}
+
+
+.psd{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+    color: #5f5f5f;
 }

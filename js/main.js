@@ -51,6 +51,8 @@ $('#range-position-x').change(function(){
         $('.product-tumb').css('background-position-x', myVar +"%");
     }
 });
+
+
 $('#range-position-y').change(function(){
     var myVar = $(this).val();
     if(myVar == 0){
@@ -60,6 +62,45 @@ $('#range-position-y').change(function(){
     }
 });
 
+
+$('#multiple').on("click", function(){
+    if($("#multiple").is(':checked')){ // checked
+
+        $('.product-card').css('background-color','transparent');
+        var mysrc = $('.product-tumb').css('background-image');
+         $('.product-card').css('background-image', mysrc);
+         $('.checkbox_bg_for_img').addClass('multiple_checked');
+    }
+
+    else{ 
+        $('.product-card').css('background-image', 'none');
+        $('.checkbox_bg_for_img').removeClass('multiple_checked');
+    }
+});
+
+
+$('#color').on('change',function(){
+
+    var c = $(this).val().substring(1);      // strip #
+    var rgb = parseInt(c, 16);   // convert rrggbb to decimal
+    var r = (rgb >> 16) & 0xff;  // extract red
+    var g = (rgb >>  8) & 0xff;  // extract green
+    var b = (rgb >>  0) & 0xff;  // extract blue
+
+    var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
+
+    if (luma < 40) {
+        // pick a different colour
+        $('.checkbox_clr').css('color', 'white');
+    }else{
+        $('.checkbox_clr').css('color', 'black');
+
+    }
+
+    $('.product-card').css('background-image', 'none');
+    $('.checkbox_clr').css('background-color', $(this).val());
+    $('.product-card').css('background-color', $(this).val());
+});
 
 
 $('#ag').on("click", function(){
